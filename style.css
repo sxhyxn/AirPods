@@ -1,0 +1,189 @@
+@charset "UTF-8";
+*{
+    margin: 0;padding: 0;
+}
+
+html{
+    font-size: 14px;
+}
+body{
+    overflow-x: hidden;
+    background-color: rgb(29, 29, 31);
+    letter-spacing: -0.05em;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.global-nav{
+    position: fixed;
+    top: 0;left: 0;
+    z-index: 10;
+    width: 100%; height: 44px;
+    padding: 0 1rem;
+    background: rgba(255, 255, 255, 0.3);
+    /*  backdrop-filter CSS 속성을 사용하면 요소 뒤 영역에 흐림 또는 색상 이동과 같은 그래픽 효과를 적용할 수 있습니다. */
+    backdrop-filter: saturate(0.7) blur(15px);
+}
+
+.local-nav{
+    position: fixed;
+    top: 44px;left: 0;
+    z-index: 10;
+    width: 100%; height: 52px;
+    padding: 0 1rem;
+    border-bottom: 1px solid #ddd;
+    background: rgba(255, 255, 255, 0.3);
+    /*  backdrop-filter CSS 속성을 사용하면 요소 뒤 영역에 흐림 또는 색상 이동과 같은 그래픽 효과를 적용할 수 있습니다. */
+    backdrop-filter: saturate(0.7) blur(15px);
+}
+
+.global-nav-links,
+.local-nav-links{
+    display: flex;
+    align-items: center;
+    max-width:1000px;
+    height: 100%;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.global-nav-links{
+    justify-content: space-between;
+}
+
+.local-nav-links .product-name{
+    margin-right: auto;
+}
+
+
+/* scroll-section */
+.scroll-section{
+    padding-top: 50vh;
+    /* 위에서 부터 중앙에 있게 */
+    box-sizing: border-box;
+}
+
+#scroll-section-0 h1{
+    font-size: 4rem;
+    text-align: center;
+    z-index: 20;
+    top: -10vw;
+    position: relative;
+}
+
+.main-message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    font-size: 2.5rem;
+    top: 35vh;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.main-message p{
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+}
+.description {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.description strong {
+    float: left;
+    margin-right: 0.2em;
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.main-message em{
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5em;
+}
+
+#scroll-section-2 .main-message{
+    font-size: 3.5rem;
+}
+.desc-message{
+    width: 50%;
+    font-weight: bold;
+}
+.pin{
+    width: 1px;height: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#scroll-section-2 .b{
+    top: 10%;left: 40%;
+}
+
+#scroll-section-2 .c{
+    top: 15%;left: 45%;
+}
+
+
+
+.sticky-elem{
+    position: fixed;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+
+
+body#show-scene-0 #scroll-section-0 .sticky-elem,
+body#show-scene-1 #scroll-section-1 .sticky-elem,
+body#show-scene-2 #scroll-section-2 .sticky-elem,
+body#show-scene-3 #scroll-section-3 .sticky-elem{
+    display: block;
+    /*sec바뀌면 sec에 맞는 애들만 보이게*/
+}
+
+
+.mid-message {
+    font-size: 2rem;
+    color: #888;
+    padding: 0 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.mid-message strong {
+    display: block;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.canvas-caption {
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.sticky-elem-canvas{
+    top: 0;
+    height: 100%;
+}
+
+.sticky-elem-canvas canvas{
+    position: absolute;
+    top: 50%;left: 50%;
+}
